@@ -150,7 +150,28 @@ body {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 100%;
+  overflow: visible;
 }
+
+/* .result-computer::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: -130%;
+  left: -130%;
+  right: -130%;
+  bottom: -130%;
+  background-image: repeating-radial-gradient(
+    circle,
+    transparent,
+    #2b3956 20%,
+    #253453 20%,
+    #223351 20%
+  );
+  z-index: -1;
+} */
+
 .result-computer.rock {
   position: absolute;
   top: 50%;
@@ -181,6 +202,8 @@ body {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 100%;
+  overflow: visible;
 }
 .result-user.rock {
   position: absolute;
