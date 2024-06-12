@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./Button";
 import Score from "./Score";
 import Modal from "./Modal";
@@ -16,10 +16,34 @@ const images = {
 };
 
 const Game = () => {
-  const [open, setOpen] = React.useState(false);
-  const [score, setScore] = useState(0);
+  const [open, setOpen] = useState(false);
+
+  const getStoredData = () => {
+    const storedScore = Number(localStorage.getItem("score"));
+    const storedTimestamp = Number(localStorage.getItem("scoreTimestamp"));
+
+    if (storedScore && storedTimestamp) {
+      const currentTime = new Date().getTime();
+      const timeDifference = currentTime - storedTimestamp;
+
+      const expirationTime = 10 * 60 * 1000;
+
+      if (timeDifference > expirationTime) {
+        localStorage.removeItem("score");
+        localStorage.removeItem("scoreTimestamp");
+        return 0;
+      } else {
+        return storedScore;
+      }
+    }
+    return 0;
+  };
+
+  const initialScore = getStoredData();
+  const [score, setScore] = useState(initialScore);
+
   const [message, setMessage] = useState("");
-  const [currentScreen, setCurrentScreen] = useState("game"); // new state variable
+  const [currentScreen, setCurrentScreen] = useState("game");
 
   const handleClose = () => {
     setOpen(false);
@@ -34,6 +58,70 @@ const Game = () => {
   const [userChoice, setUserChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
 
+  const addWinCssComputer = () => {
+    const styleElement = document.createElement("style");
+    styleElement.id = "win-css-computer-style";
+    styleElement.innerHTML = `
+    .result-computer::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      top: -130%;
+      left: -130%;
+      right: -130%;
+      bottom: -130%;
+      background-image: repeating-radial-gradient(
+        circle,
+        transparent,
+        #2b3956 20%,
+        #253453 20%,
+        #223351 20%
+      );
+      z-index: -1;
+    }
+    `;
+    document.head.appendChild(styleElement);
+  };
+
+  const removeWinCssComputer = () => {
+    const styleElement = document.getElementById("win-css-computer-style");
+    if (styleElement) {
+      styleElement.remove();
+    }
+  };
+
+  const addWinCssUser = () => {
+    const styleElement = document.createElement("style");
+    styleElement.id = "win-css-user-style";
+    styleElement.innerHTML = `
+    .result-user::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      top: -130%;
+      left: -130%;
+      right: -130%;
+      bottom: -130%;
+      background-image: repeating-radial-gradient(
+        circle,
+        transparent,
+        #2b3956 20%,
+        #253453 20%,
+        #223351 20%
+      );
+      z-index: -1;
+    }
+    `;
+    document.head.appendChild(styleElement);
+  };
+
+  const removeWinCssUser = () => {
+    const styleElement = document.getElementById("win-css-user-style");
+    if (styleElement) {
+      styleElement.remove();
+    }
+  };
+
   const playGame = (userChoice) => {
     const computerChoice = choices[Math.floor(Math.random() * 3)];
     setUserChoice(userChoice);
@@ -45,20 +133,28 @@ const Game = () => {
       (userChoice === "scissors" && computerChoice === "paper") ||
       (userChoice === "paper" && computerChoice === "rock")
     ) {
-      setScore(score + 1);
+      setScore((prevScore) => prevScore + 1);
       setMessage("YOU WIN");
+      addWinCssUser();
     } else {
-      if (score === 0) {
-        setMessage("YOU LOSE");
-      } else setScore(score - 1);
+      setScore((prevScore) => (prevScore > 0 ? prevScore - 1 : 0));
       setMessage("YOU LOSE");
+      addWinCssComputer();
     }
-    setCurrentScreen("result"); // navigate to result screen
+    setCurrentScreen("result");
   };
 
   const handleBack = () => {
-    setCurrentScreen("game"); // navigate back to game screen
+    removeWinCssUser();
+    removeWinCssComputer();
+    setCurrentScreen("game");
   };
+
+  useEffect(() => {
+    const currentTime = new Date().getTime();
+    localStorage.setItem("score", score);
+    localStorage.setItem("scoreTimestamp", currentTime);
+  }, [score]);
 
   return (
     <div className="game-container">
