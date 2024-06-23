@@ -60,8 +60,18 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ## 🤝 Contributing
 Contributions are welcome! If you have any ideas or improvements, feel free to open an issue or send a pull request.
 
-## 👥 Authors
-<img alt="Anthony-Marin" height="20" width="20" src="https://avatars.githubusercontent.com/u/68450692?v=4"> Anthony Marin (Sub-Dev) - [Sub-Dev](https://github.com/Sub-Dev)
+## 👥 Autores
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/68450692?v=4" alt="Anthony-Marin" height="30" width="30"/>
+    </td>
+    <td>
+      <strong>Anthony Marin</strong> (Sub-Dev) - <a href="https://github.com/Sub-Dev">GitHub Profile</a>
+    </td>
+  </tr>
+</table>
 
 ## 💬 Thanks
 Thanks to Frontend Mentor for the engaging challenge that inspired this project.
