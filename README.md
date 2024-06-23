@@ -22,11 +22,16 @@ Score Tracking: Scores are stored locally using your browser's local storage, al
 Responsive Design: The game is designed to be fully responsive, ensuring a seamless experience on various devices and screen sizes.
 React.js Integration: Built using React.js for a dynamic and fluid user interface.
 ## 🎨 Technologies Used
-HTML5: For the structure and layout of the game interface.
-CSS3: To style and make the game visually appealing with animations and transitions.
-JavaScript: To add functionality and logic to the game.
-React.js: To create a responsive and interactive user experience.
-Local Storage: To persist scores between sessions.
+- <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"> HTML5: For the structure and layout of the game interface.
+- <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> CSS3: To style and make the game visually appealing with animations and transitions.
+- <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> JavaScript: To add functionality and logic to the game.
+-  <img align="center" alt="ReactJS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"> React.js: To create a responsive and interactive user experience.
+-   <img align="center" alt="LocalStorage" height="30" width="40" src="https://cdn-icons-png.flaticon.com/512/2879/2879141.png"> Local Storage: To persist scores between sessions.
+
+ 
+ 
+  
+
 ## 🛠️ Getting Started
 To obtain a copy of this project and run it locally for development and testing, follow these steps:
 
@@ -59,14 +64,14 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 Contributions are welcome! If you have any ideas or improvements, feel free to open an issue or send a pull request.
 
 ## 👥 Authors
-Anthony Marin (Sub-Dev) - [Sub-Dev] (https://github.com/Sub-Dev)
+Anthony Marin (Sub-Dev) - [Sub-Dev](https://github.com/Sub-Dev)
 
 ## 💬 Thanks
 Thanks to Frontend Mentor for the engaging challenge that inspired this project.
 Special thanks to the open source community for the invaluable resources and tools that made this project possible.
 ## 🌐 Links
-Live Demo: [Play the game here] (https://sub-dev.github.io/Rock-Paper-Scissors/)
-Challenge Link: [Frontend Mentor Challenge] (https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
-Repository: [Repository on GitHub] (https://github.com/Sub-Dev/Rock-Paper-Scissors)
+- Live Demo: [Play the game here](https://sub-dev.github.io/Rock-Paper-Scissors/)
+- Challenge Link: [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
+- Repository: [Repository on GitHub](https://github.com/Sub-Dev/Rock-Paper-Scissors)
 
 Have fun playing.
