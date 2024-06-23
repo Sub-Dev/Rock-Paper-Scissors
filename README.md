@@ -60,15 +60,17 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ## 🤝 Contributing
 Contributions are welcome! If you have any ideas or improvements, feel free to open an issue or send a pull request.
 
-## 👥 Autores
+## 👥 Authors
 
 <table>
   <tr>
     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/68450692?v=4" alt="Anthony-Marin" height="30" width="30"/>
+      <a href="https://github.com/Sub-Dev" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/68450692?v=4" alt="Anthony-Marin" height="30" width="30"/>
+      </a>
     </td>
     <td>
-      <strong>Anthony Marin</strong> (Sub-Dev) - <a href="https://github.com/Sub-Dev">GitHub Profile</a>
+      <strong>Anthony Marin</strong> (Sub-Dev) - <a href="https://github.com/Sub-Dev">Profile on GitHub</a>
     </td>
   </tr>
 </table>
